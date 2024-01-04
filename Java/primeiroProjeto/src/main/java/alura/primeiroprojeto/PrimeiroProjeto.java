@@ -1,7 +1,6 @@
 
 package alura.primeiroprojeto;
 
- * @author gusta
 public class PrimeiroProjeto {
 
     public static void main(String[] args) {
