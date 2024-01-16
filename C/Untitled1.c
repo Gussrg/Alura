@@ -11,9 +11,18 @@ int main(void)
 
     for(int i = 1; i <=3; i++)
     {
-        printf("tentativa %d de 3\n", i);
-        printf("Qual é o seu chute?\n");
-        scanf("%d",&chute);
+        do
+        {
+            printf("tentativa %d de 3\n", i);
+            printf("Qual é o seu chute?\n");
+            scanf("%d",&chute);
+            if(chute < 0)
+            {
+                printf("Você não pode digitar um numero menor que 0\n");
+            }
+        }
+        while(chute<0);
+
         if(chute == numeroSecreto)
         {
             printf("Parabens!Você acertou!\n");
