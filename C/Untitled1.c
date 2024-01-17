@@ -7,7 +7,7 @@ int main(void)
     printf("* Bem vindo ao nosso jogo de adivinhação *!\n");
     printf("*******************************************\n");
 
-    int numeroSecreto = 42, chute;
+    int numeroSecreto = 42, chute, pontos =1000;
 
     for(int i = 1; i <=3; i++)
     {
@@ -40,9 +40,14 @@ int main(void)
                 printf("Seu número é menor que o numero secreto\n");
             }
         }
+            int pontosperdidos = (chute - numeroSecreto) /2;
+            pontos = pontos - pontosperdidos;
     }
 
+
     printf("Fim de jogo!\n");
+    //printf("");
+    printf("Total de pontos: %d\n", pontos);
 
     return(0);
 }
